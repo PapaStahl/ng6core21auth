@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Login</h4>
+    <div class="card-text">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Email</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="LoginDto.name" placeholder="email" />
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Password</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="LoginDto.password" placeholder="password" />
+      </div>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" (click)="loginClick()">Login</button>
+      
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Register</h4>
+    <div class="card-text">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Email</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="RegisterDto.name" placeholder="email" />
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Password</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="RegisterDto.password" placeholder="password" />
+      </div>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" (click)="registerClick()">Register</button>
+      <div *ngIf="Message" class="alert alert-info">{{Message}}</div>
+    </div>
+  </div>
+</div>
+
