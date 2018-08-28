@@ -34,14 +34,8 @@ export class UserComponent implements OnInit {
   }
 
   loginClick() {
-    this.userSvc.login(this.LoginDto).subscribe(
-      s => {
-        console.log('redirecting to fetch-data')
-        this.router.navigate(['fetch-data']);
-      },
-      error => { this.Message = JSON.stringify(error); },
-      () => { console.log('login done'); }
-    );
+    this.userSvc.login(this.LoginDto);
+    this.Message = this.userSvc.token;
   }
 
 }

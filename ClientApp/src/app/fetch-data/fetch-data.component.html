@@ -2,8 +2,9 @@
   <h1>Weather forecast</h1>
 
   <p>This component demonstrates fetching data from the server.</p>
+<div *ngIf="Msg" class="alert alert-warning">{{Msg}}</div>
 
-  <p *ngIf="!forecasts"><em>Loading...</em></p>
+  <p *ngIf="!forecasts && !Msg"><em>Loading...</em></p>
 
   <table class='table' *ngIf="forecasts">
     <thead>
