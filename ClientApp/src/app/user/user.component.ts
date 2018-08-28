@@ -35,7 +35,7 @@ export class UserComponent implements OnInit {
 
   loginClick() {
     this.userSvc.login(this.LoginDto);
-    this.Message = this.userSvc.token;
+    this.Message = this.userSvc.token.access_token;
   }
 
 }
